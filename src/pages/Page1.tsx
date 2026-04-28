@@ -1,7 +1,9 @@
+import HeroSearchForm from "../components/HeroSearchForm";
+
 export default function Page1() {
-    return (
-        <div className="h-[calc(100vh-4rem)] flex justify-center items-center">
-            <h1>Page 1</h1>
-        </div>
-    )
+  return (
+    <main className="w-full">
+      <HeroSearchForm />
+    </main>
+  );
 }

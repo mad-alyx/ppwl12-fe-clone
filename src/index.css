@@ -70,6 +70,10 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Beaufort', serif;
 }
 
+.text-force-white {
+  color: white !important;
+}
+
 .text-gold {
   color: var(--gold);
 }
