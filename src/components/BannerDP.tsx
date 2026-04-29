@@ -16,9 +16,6 @@ const BannerDp = () => {
             alt="Promo tiketDP"
             className="w-full h-auto object-cover block group-hover:scale-[1.01]"
           />
-
-          {/* Efek overlay tipis saat kursor di atasnya (Hover) */}
-          <div className="absolute inset-0 bg-black/0 group-hover:bg-black/1 transition-colors" />
         </a>
         
       </div>

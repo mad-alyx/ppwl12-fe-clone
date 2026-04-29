@@ -39,11 +39,11 @@ const TravelIdeas = () => {
       { img: '/img/family.jpg' },
       { img: '/img/backpack.jpg' },
       { img: '/img/luxury.jpg' },
-      { img: '/img/Business.jpg' },
+      { img: '/img/business.jpg' },
     ]
   };
 
-  // Fungsi untuk mengecek posisi scroll agar panah muncul/hilang tepat waktu
+  // panah kanan kiri supaya bisa hilang dan muncul
   const handleScrollStatus = () => {
     if (scrollRef.current) {
       const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current;
@@ -60,7 +60,7 @@ const TravelIdeas = () => {
     }
   }, [activeTab]);
 
-  // Fungsi geser langsung 4 kartu (sejauh lebar container yang terlihat)
+  // ini kalau di pencet panahnya langsung geser 4 buah
   const scroll = (direction: 'left' | 'right') => {
     if (scrollRef.current) {
       const { clientWidth } = scrollRef.current;
@@ -119,7 +119,6 @@ const TravelIdeas = () => {
             {dataDestinasi[activeTab].map((item, index) => (
               <div 
                 key={index} 
-                /* min-w-[calc(25%-12px)] memastikan tepat 4 kartu tampil di desktop */
                 className="relative min-w-[75%] md:min-w-[calc(25%-12px)] aspect-square rounded-2xl overflow-hidden cursor-pointer shadow-sm"
               >
                 <img src={item.img}className="w-full h-full object-cover" />
@@ -143,7 +142,7 @@ const TravelIdeas = () => {
 
         {/* Tombol Lihat Semua di Bawah */}
         <div className="mt-10 flex justify-center">
-          <button className="px-12 py-3 rounded-[12px] bg-[#F0F5FF] text-[#0064D2] font-tiket font-bold text-[15px] hover:bg-[#E1EBFF] transition-colors">
+          <button className="px-12 py-3 rounded-md bg-[#F0F5FF] text-[#0064D2] font-tiket font-bold text-[15px] hover:bg-[#E1EBFF] transition-colors">
             Lihat semua!
           </button>
         </div>
