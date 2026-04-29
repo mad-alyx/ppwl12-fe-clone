@@ -1,47 +1,64 @@
 @import "tailwindcss";
 
+/* Daftarkan Font Odyssey Tiket */
 @font-face {
-  font-family: "Beaufort";
-  src: url("/fonts/Beaufort-for-LOL-400.woff2") format("woff2");
-  font-weight: 400;
+  font-family: 'TiketOdysseyText';
+  src: url('/fonts/TiketOdysseyText-Regular.woff2') format('woff2');
+  font-weight: 400; /* Normal */
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Beaufort";
-  src: url("/fonts/Beaufort-for-LOL-500.woff2") format("woff2");
-  font-weight: 500;
+  font-family: 'TiketOdysseyText';
+  src: url('/fonts/TiketOdysseyText-SemiBold.woff2') format('woff2');
+  font-weight: 600; /* Semi Bold */
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Beaufort";
-  src: url("/fonts/Beaufort-for-LOL-700.woff2") format("woff2");
-  font-weight: 700;
+  font-family: 'TiketOdysseyText';
+  src: url('/fonts/TiketOdysseyText-Bold.woff2') format('woff2');
+  font-weight: 800; /* Bold/Extra Bold */
   font-style: normal;
 }
 
-@font-face {
-  font-family: "Spiegel";
-  src: url("/fonts/Spiegel-700.woff2") format("woff2");
-  font-weight: 700;
-  font-style: normal;
+/* Set sebagai font utama untuk seluruh body */
+body {
+  margin: 0;
+  font-family: 'TiketOdysseyText', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
 }
 
 @theme {
-  --font-beaufort: "Beaufort", serif;
-  --font-spiegel: "Spiegel", serif;
+  --font-tiket: "TiketOdysseyText", sans-serif;
 }
 
 :root {
-  --background: #0a0a0c;
-  --foreground: #e8e6e3;
-  --gold: #937341;
-  --gold-light: #f0e6d2;
-  --gold-dark: #785a28;
-  --card-bg: #111113;
-  --card-border: #1e1e21;
-  --muted: #7a7a7a;
+  /* Warna Dasar Tiket.com */
+  --background: #ffffff;
+  --foreground: #232323;
+  --color-N0: #ffffff;
+  --color-N100: #f2f3f3;
+  --color-N200: #e6e9eb;
+  --color-N800: #232323;
+
+  /* Warna Teks & Penekanan (High/Low Emphasis) */
+  --font-color-high-emphasis: #232323;
+  --font-color-low-emphasis: #6a6a6a;
+  --font-color-invert: #ffffff;
+
+  /* Status Warna */
+  --color-R400: #ed2d2d; /* Alert/Error */
+  --color-G500: #01921b; /* Success/Positive */
+
+  /* Variabel Font (Sesuai Inspect Element) */
+  --font-weight-bold: 800;
+  --font-weight-regular: 400;
+  --font-size-desktop-h1-px: 38px;
+  
+  /* Jarak/Space (Sesuai Kode Modul Tiket) */
+  --edge-padding: 40px;
+  --z-header: 1000;
 }
 
 * {
@@ -52,22 +69,22 @@ html {
   scroll-behavior: smooth;
 }
 
+
 body {
+  margin: 0;
+  font-family: 'TiketOdysseyText', system-ui, sans-serif !important;
   background: var(--background);
-  color: var(--foreground);
-  font-family: 'Marcellus', serif;
+  color: #ffffff;
+  -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Spiegel', serif;
-  font-weight: 700;
-  color: var(--gold);
-  
+  font-family: 'TiketOdysseyText', sans-serif !important;
 }
 
 .font-display {
-  font-family: 'Beaufort', serif;
+  font-family: 'TiketOdysseyText', serif;
 }
 
 .text-gold {
@@ -87,7 +104,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .section-title {
-  font-family: 'Beaufort', serif;
+  font-family: 'TiketOdysseyText', serif;
   letter-spacing: 0.35em;
   text-transform: uppercase;
   color: var(--gold);
