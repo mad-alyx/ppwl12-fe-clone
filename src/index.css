@@ -1,36 +1,38 @@
 @import "tailwindcss";
 
-@font-face {
-  font-family: "Beaufort";
-  src: url("/fonts/Beaufort-for-LOL-400.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Beaufort";
-  src: url("/fonts/Beaufort-for-LOL-500.woff2") format("woff2");
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Beaufort";
-  src: url("/fonts/Beaufort-for-LOL-700.woff2") format("woff2");
-  font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Spiegel";
-  src: url("/fonts/Spiegel-700.woff2") format("woff2");
-  font-weight: 700;
-  font-style: normal;
-}
 
 @theme {
-  --font-beaufort: "Beaufort", serif;
-  --font-spiegel: "Spiegel", serif;
+  --font-tiket: "TiketOdyssey", sans-serif;
+}
+
+@font-face {
+  font-family: 'TiketOdyssey';
+  src: url('/fonts/TiketOdysseyText-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TiketOdyssey';
+  src: url('/fonts/TiketOdysseyText-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TiketOdyssey';
+  src: url('/fonts/TiketOdysseyText-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  margin: 0;
+  font-family: 'TiketOdysseyText', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
 }
 
 :root {
@@ -59,15 +61,13 @@ body {
   overflow-x: hidden;
 }
 
-/* h1, h2, h3, h4, h5, h6 {
-  font-family: 'Spiegel', serif;
-  font-weight: 700;
-  color: var(--gold);
-  
-} */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'TiketOdysseyText', sans-serif !important;
+}
+
 
 .font-display {
-  font-family: 'Beaufort', serif;
+  font-family: 'TiketOdysseyText', serif;
 }
 
 .text-gold {
@@ -87,7 +87,7 @@ body {
 }
 
 .section-title {
-  font-family: 'Beaufort', serif;
+  font-family: 'TiketOdysseyText', serif;
   letter-spacing: 0.35em;
   text-transform: uppercase;
   color: var(--gold);

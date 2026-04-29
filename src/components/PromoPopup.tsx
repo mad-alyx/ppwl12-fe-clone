@@ -43,7 +43,7 @@ const PromoPopup = () => {
           <div className="p-5 bg-white">
             <button 
               onClick={() => setIsOpen(false)}
-              className="w-full bg-[#0064D2] hover:bg-[#0052ac] text-white font-bold py-3 px-6 rounded-full transition-colors text-sm"
+              className="w-full bg-[#007CFF] hover:bg-[#5BAAFF] text-white font-tiket font-bold py-3 px-6 rounded-full transition-colors text-sm"
             >
               Klaim penerbangan murah
             </button>

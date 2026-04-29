@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect } from 'react';
 
 const TravelIdeas = () => {
   // Status untuk menyimpan tab mana yang sedang aktif
@@ -75,20 +75,20 @@ const TravelIdeas = () => {
     <section className="w-full bg-white py-12">
       <div className="container mx-auto px-4 max-w-275">
         
-        <h2 className="text-[22px] font-bold text-[#1A1A1A] mb-6">
+        <h2 className="font-tiket text-[22px] font-bold text-[#1A1A1A] mb-6">
           Ide liburan yang wajib dicatat! 🗺️📌
         </h2>
 
-        {/* Filter Tabs - Scrollbar disembunyikan pakai Tailwind Arbitrary */}
+        {/* Tab */}
         <div className="flex gap-2 mb-8 overflow-x-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
           {Object.keys(dataDestinasi).map((tab) => (
             <button
               key={tab}
               onClick={() => setActiveTab(tab)}
-              className={`px-5 py-2 rounded-full font-bold text-sm border transition-all whitespace-nowrap
+              className={`px-3 py-2 rounded-full text-[14px] font-tiket font-light border transition-all duration-300 
                 ${activeTab === tab 
-                  ? 'bg-[#E8F3FF] text-[#0064D2] border-[#CCE4FF]' 
-                  : 'bg-white text-[#666666] border-[#E5E7EB]'}`}
+                  ? 'bg-[#E8F3FF] text-[#0064D2] border-[#0064D2]' 
+                  : 'bg-white text-[#1A1A1A] border-[#E5E7EB]'}`}
             >
               {tab}
             </button>
@@ -98,7 +98,7 @@ const TravelIdeas = () => {
         {/* Carousel Area */}
         <div className="relative group">
           
-          {/* Tombol Panah Kiri (Muncul jika sudah digeser) */}
+          {/* Tombol Panah Kiri */}
         {showLeftArrow && (
             <button 
               onClick={() => scroll('left')}
@@ -110,7 +110,7 @@ const TravelIdeas = () => {
             </button>
           )}
 
-          {/* Area Scroll Gambar - 1:1 Aspect Ratio & No Scrollbar */}
+          {/* GAMBAR */}
           <div 
             ref={scrollRef}
             onScroll={handleScrollStatus}
@@ -127,7 +127,7 @@ const TravelIdeas = () => {
             ))}
           </div>
 
-          {/* Tombol Panah Kanan (Muncul jika ada sisa data di kanan) */}
+          {/* Tombol Panah Kanan */}
             {showRightArrow && dataDestinasi[activeTab].length > 4 && (
             <button 
               onClick={() => scroll('right')}
@@ -143,7 +143,7 @@ const TravelIdeas = () => {
 
         {/* Tombol Lihat Semua di Bawah */}
         <div className="mt-10 flex justify-center">
-          <button className="px-12 py-3 rounded-[12px] bg-[#F0F5FF] text-[#0064D2] font-bold text-[15px] hover:bg-[#E1EBFF] transition-colors">
+          <button className="px-12 py-3 rounded-[12px] bg-[#F0F5FF] text-[#0064D2] font-tiket font-bold text-[15px] hover:bg-[#E1EBFF] transition-colors">
             Lihat semua!
           </button>
         </div>
