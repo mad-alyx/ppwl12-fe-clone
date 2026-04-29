@@ -1,23 +1,15 @@
 # PPWL 12 - FE - Clone
-Kelas Praktikum Pemograman Web Lanjut 2026 (Sistem Informasi/UNTAN). Minggu ke-12. 
-- Tiap tim diberi beberapa url sub page (Home, Detail, etc.) dari web yang sama.
-- Menggunakan React TS & TailwindCSS, mahasiswa diharapkan dapat membuat UI dan interaksi page yang sama persis seperti di referensi. Nilai plus jika terdapat CSS ataupun Component UI yang terintegrasi.
-
-> [!NOTE]
-> Lihat `instruction.md` untuk instruksi pengerjaan.
-> Gunakan file `README.md` ini sebagai laporan. Isi laporan berupa nama tim & page yang tiap anggota handle. 
-
 **Class A / Team 1**
 
-Main Web: [kokbisa.id](https://www.kokbisa.id/)
+Main Web: [tiket.com](https://www.tiket.com)
 
 |        Name       |    NIM     | Reference Page | Spesific Component |
 |-------------------|------------|----------------|--------------------|
-| Leo Prangs Tobing | H110124000 | [Page1-Home](https://www.kokbisa.id/) | Navbar, Header Carousel |
-| Other             | H110124000 | [Page1-Home](https://www.kokbisa.id/) | Main |
-| Other             | H110124000 | [Page1-Home](https://www.kokbisa.id/) | Footer |
-| Other             | H110124000 | [Page2-Langganan](https://www.kokbisa.id/langganan) | Title Area |
-| Other             | H110124000 | [Page2-Langganan](https://www.kokbisa.id/langganan) | Form Area |
-| Other             | H110124000 | [Page2-Langganan](https://www.kokbisa.id/langganan) | Button Area |
+| Raden Aliyah Panji Anom | H1101240654| [Page1-Home](https://www.tiket.com/id-id) | Navbar, Topbar, Main Content |
+| Irene Nasya Azalia | H110124031 | [Page1-Home](https://www.tiket.com/id-id) | Hero, Search Form, Main Content |
+| Nayla Zakiyah Andani | H110124002 | [Page1-Home](https://www.tiket.com/id-id) | Popup Promo, Banner App, Banner DP, Main Content |
+| Fahdil Raihandi | H110124035 | [Page2-Flights](https://www.tiket.com/id-id/flights) | Section Promo Flights, Section Info |
+| Rola Dea Januarita | H110124016 | [Page2-Flights](https://www.tiket.com/id-id/flights) | Hero, Search Form Flight |
+| Nabil Nur Fauzan | H110124046 | [Page2-Flights](https://www.tiket.com/id-id/flights) | Section Card/Promo Homepage, Footer |
 
 team-1
