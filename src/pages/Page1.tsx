@@ -1,7 +1,11 @@
+import TiketNavbar from '../components/TiketNavbar';
+import TiketHero from '../components/TiketHero';
+
 export default function Page1() {
-    return (
-        <div className="h-[calc(100vh-4rem)] flex justify-center items-center">
-            <h1>Page 1</h1>
-        </div>
-    )
+  return (
+    <div>
+      <TiketNavbar />
+      <TiketHero />
+    </div>
+  );
 }
