@@ -18,7 +18,7 @@ const BannerDp = () => {
           />
 
           {/* Efek overlay tipis saat kursor di atasnya (Hover) */}
-          <div className="absolute inset-0 bg-black/0 group-hover:bg-black/[0.01] transition-colors" />
+          <div className="absolute inset-0 bg-black/0 group-hover:bg-black/1 transition-colors" />
         </a>
         
       </div>
