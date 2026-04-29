@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { heroChampions } from "@/lib/contoh-data";
+import { heroChampions } from "@/lib/constants";
 
 import FeaturedChampionCard from "@/components/contohComponent";
 
@@ -395,7 +395,7 @@ function RegionCard({ name, icon, image }: RegionCardProps) {
     );
 }
 
-import { footerLinks, legalLinks } from "@/lib/contoh-data";
+import { footerLinks, legalLinks } from "@/lib/constants";
 
 function Footer() {
     return (
@@ -489,7 +489,7 @@ import {
     featuredChampions,
     featuredChampionsLarge,
     regions,
-} from "@/lib/contoh-data";
+} from "@/lib/constants";
 
 export default function App() {
     return (

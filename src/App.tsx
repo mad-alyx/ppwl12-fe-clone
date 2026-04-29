@@ -1,19 +1,37 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Page1 from './pages/Page1';
-import Page2 from './pages/Page2';
-import PageExample from './pages/PageExample';
 import Navbar from './components/Navbar';
+import FlightSearch from './components/FlightInfo';
+import RecentSearch from './components/RecentSearch';
+import FlightDeals from './components/FlightDeals';
+import PromoBanners from './components/PromoBanners';
+import DomesticDeals from './components/DomesticDeals';
+import SpecialOffers from './components/LastBanner';
+import LastBanner from './components/LastBanner';
 
 function App() {
   return (
-    <Router>
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Page1 />} />
-          <Route path="/page-2" element={<Page2 />} />
-          <Route path="/page-example" element={<PageExample />} />
-        </Routes>
-    </Router>
+    <div className="min-h-screen bg-white">
+      {/* 1. NAVBAR TETAP ADA */}
+      <Navbar />
+
+      <main>
+        {/* 2. HERO & SEARCH SECTION TETAP ADA */}
+        <FlightSearch />
+
+        <RecentSearch />
+
+        <FlightDeals />
+
+        <PromoBanners />
+
+        <DomesticDeals />
+
+        <LastBanner /> 
+
+        <section className="max-w-[1200px] mx-auto px-4 pv-16">
+
+        </section>
+      </main>
+    </div>
   );
 }
 
