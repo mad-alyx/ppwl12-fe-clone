@@ -1,32 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap');
 @import "tailwindcss";
 
-/* Daftarkan Font Odyssey Tiket */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @font-face {
-  font-family: 'TiketOdysseyText';
-  src: url('/fonts/TiketOdysseyText-Regular.woff2') format('woff2');
-  font-weight: 400; /* Normal */
+  font-family: "Beaufort";
+  src: url("/fonts/Beaufort-for-LOL-400.woff2") format("woff2");
+  font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'TiketOdysseyText';
-  src: url('/fonts/TiketOdysseyText-SemiBold.woff2') format('woff2');
-  font-weight: 600; /* Semi Bold */
+  font-family: "Beaufort";
+  src: url("/fonts/Beaufort-for-LOL-500.woff2") format("woff2");
+  font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'TiketOdysseyText';
-  src: url('/fonts/TiketOdysseyText-Bold.woff2') format('woff2');
-  font-weight: 800; /* Bold/Extra Bold */
+  font-family: "Beaufort";
+  src: url("/fonts/Beaufort-for-LOL-700.woff2") format("woff2");
+  font-weight: 700;
   font-style: normal;
 }
 
-/* Set sebagai font utama untuk seluruh body */
-body {
-  margin: 0;
-  font-family: 'TiketOdysseyText', system-ui, -apple-system, sans-serif;
-  -webkit-font-smoothing: antialiased;
+@font-face {
+  font-family: "Spiegel";
+  src: url("/fonts/Spiegel-700.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
 }
 
 /* Tambahan font TiketOdysseyText */
@@ -57,31 +61,14 @@ body {
 }
 
 :root {
-  /* Warna Dasar Tiket.com */
-  --background: #ffffff;
-  --foreground: #232323;
-  --color-N0: #ffffff;
-  --color-N100: #f2f3f3;
-  --color-N200: #e6e9eb;
-  --color-N800: #232323;
-
-  /* Warna Teks & Penekanan (High/Low Emphasis) */
-  --font-color-high-emphasis: #232323;
-  --font-color-low-emphasis: #6a6a6a;
-  --font-color-invert: #ffffff;
-
-  /* Status Warna */
-  --color-R400: #ed2d2d; /* Alert/Error */
-  --color-G500: #01921b; /* Success/Positive */
-
-  /* Variabel Font (Sesuai Inspect Element) */
-  --font-weight-bold: 800;
-  --font-weight-regular: 400;
-  --font-size-desktop-h1-px: 38px;
-  
-  /* Jarak/Space (Sesuai Kode Modul Tiket) */
-  --edge-padding: 40px;
-  --z-header: 1000;
+  --background: #0a0a0c;
+  --foreground: #e8e6e3;
+  --gold: #ffffff;
+  --gold-light: #f0e6d2;
+  --gold-dark: #785a28;
+  --card-bg: #111113;
+  --card-border: #1e1e21;
+  --muted: #7a7a7a;
 }
 
 * {
@@ -92,10 +79,7 @@ html {
   scroll-behavior: smooth;
 }
 
-
 body {
-  margin: 0;
-  font-family: 'TiketOdysseyText', system-ui, sans-serif !important;
   background: var(--background);
   color: var(--foreground);
   font-family: 'Marcellus', serif;
@@ -222,3 +206,70 @@ h1, h2, h3, h4, h5, h6 {
   background: var(--gold);
   color: #0a0a0c;
 }
+
+/* Tambahkan di akhir file untuk memaksa font dan warna bekerja */
+@layer base {
+  body {
+    font-family: 'Open Sans', sans-serif !important;
+  }
+
+  /* Ini supaya class text-white dari tailwind menang telak */
+  .text-white {
+    color: #f4efef !important;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+}
+
+/* Hapus margin default browser */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* --- TAMBAHKAN DI BAGIAN PALING BAWAH --- */
+
+:root {
+  /* Memaksa browser mengabaikan Dark Mode agar teks tidak jadi putih */
+  color-scheme: light !important;
+}
+
+body {
+  /* Memastikan background dan warna teks utama sesuai standar tiket.com */
+  background-color: #f4f7fe !important;
+  color: #1a202c !important;
+}
+
+/* Memastikan semua judul dan teks dalam kartu promo muncul dengan warna tajam */
+h1, h2, h3, h4, h5, h6, p, span {
+  color: inherit; 
+}
+
+/* Menghilangkan scrollbar pada filter maskapai agar rapi seperti di gambar */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Di bagian bawah index.css */
+body {
+  background-color: #f4f7fe !important;
+  color: #1a202c !important; /* Warna default teks tiket */
+}
+
+/* Warna khusus untuk teks pudar/detail */
+.text-detail {
+  color: #8a93a7 !important;
+}
+
