@@ -1,10 +1,10 @@
 import TiketNavbar from '../components/TiketNavbar';
 import TiketHero from '../components/TiketHero';
 import HeroSearchForm from "../components/HeroSearchForm";
-import BusTravelSection from "../components/BusTravelSection";
-import PromoSections from "../components/PromoSections";
 import AleContent from '../components/alecontent'; 
+import BusTravelSection from "../components/BusTravelSection";
 import AppBanner from '../components/AppBanner';
+import PromoSections from "../components/PromoSections";
 import BannerDp from '../components/BannerDP';
 import PromoPopup from '../components/PromoPopup';
 import TravelIdeas from '../components/TravelIdeas';
@@ -22,12 +22,12 @@ const Page1 = () => {
       </div>
 
       {/* 2. Isi Konten (Ale, Iren, Nayla) */}
+      <AppBanner />
       <AleContent /> 
       <BusTravelSection />
       <PromoSections />
 
       {/* 3. Komponen Tambahan dari Branch Nayla */}
-      <AppBanner />
       <BannerDp />
       <TravelIdeas />
       
