@@ -1,11 +1,10 @@
+
 import TiketNavbar from '../components/TiketNavbar';
 import TiketHero from '../components/TiketHero';
-import HeroSearchForm from '../components/HeroSearchForm';
-import AleContent from '../components/alecontent';
-import PromoBanners from '../components/PromoBanners';
-import DomesticDeals from '../components/DomesticDeals';
-import LastBanner from '../components/LastBanner';
-import PromoFlight from '../components/PromoFlight';
+import HeroSearchForm from "../components/HeroSearchForm";
+import BusTravelSection from "../components/BusTravelSection";
+import PromoSections from "../components/PromoSections";
+import AleContent from '../components/alecontent'; 
 
 const Page1 = () => {
   return (
@@ -14,13 +13,14 @@ const Page1 = () => {
       <TiketHero /> 
       <HeroSearchForm /> 
       
-      <div className="max-w-[1200px] mx-auto px-4 space-y-12 pb-20">
-        <PromoBanners /> 
-        <DomesticDeals /> 
-        <PromoFlight /> 
-        <AleContent /> 
-        <LastBanner /> 
-      </div>
+      {/* 2. Tambahkan komponen kamu di sini */}
+      <AleContent /> 
+      
+      {/* Nanti kerjaan Iren & Nayla tinggal tumpuk di bawah sini */}
+      <HeroSearchForm />
+      <BusTravelSection />
+      <PromoSections />
+
     </div>
   );
 };

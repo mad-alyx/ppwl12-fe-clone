@@ -106,9 +106,8 @@ export default function HeroSearchForm() {
     { key: "affiliate", label: "Afiliasi", icon: "🤝", badge: "Baru", url: "https://www.tiket.com/en-id/blibli-affiliate" },
   ];
 
-  // SESUDAH
-    return (
-        <div className="w-full bg-white rounded-2xl  overflow-visible -mt-45 relative z-10">
+  return (
+    <div className="w-full bg-white rounded-2xl shadow-2xl overflow-visible">
 
       {/* Tab bar */}
       <div className="relative flex items-center px-4 pt-3 pb-2">

@@ -33,6 +33,28 @@
   font-style: normal;
 }
 
+/* Tambahan font TiketOdysseyText */
+@font-face {
+  font-family: "TiketOdysseyText";
+  src: url("/fonts/TiketOdysseyText-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "TiketOdysseyText";
+  src: url("/fonts/TiketOdysseyText-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "TiketOdysseyText";
+  src: url("/fonts/TiketOdysseyText-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
 @theme {
   --font-beaufort: "Beaufort", serif;
   --font-spiegel: "Spiegel", serif;
