@@ -6,11 +6,15 @@ import PromoFlight from '@/components/PromoFlight';
 import DomesticDeals from '../components/DomesticDeals';
 import LastBanner from '../components/LastBanner';
 import FlightSearchCard from "../components/FlightSearchCard";
+import AirlineCarousel from '../components/AirlineCarousel';
+import SeoLinkTabs from '../components/SeoLinkTabs';
+import SmartFeatures from '../components/SmartFeatures';
+import Footer from '../components/Footer'; 
 
 const Page2 = () => {
   return (
-    <main className="w-full min-h-screen bg-[#F5F7FA]">
-      {/* 1. Bagian Hero (Gambar Pesawat + Search Card) */}
+    <main className="w-full min-h-screen bg-white">
+      {/* 1. Bagian Hero (Latar Belakang Biru/Gelap) */}
       <section
         className="relative w-full h-[500px] bg-cover bg-center flex items-center"
         style={{
@@ -29,16 +33,31 @@ const Page2 = () => {
         </div>
       </section>
 
-      {/* 2. Bagian Konten Bawah (Deals & Promo) */}
-      <div className="max-w-[1200px] mx-auto px-4 py-12 space-y-12">
-        <RecentSearch />
-        <FlightDeals />
-        <FlightSearch />
-        <PromoBanners />
-        <PromoFlight />
-        <DomesticDeals />
-        <LastBanner />
+      {/* 2. Bagian Konten Utama (Latar Abu-abu Muda khas Tiket.com) */}
+      <div className="bg-[#f8f9fd] py-12">
+        <div className="max-w-[1200px] mx-auto px-4 space-y-12">
+          <RecentSearch />
+          <SeoLinkTabs />
+          <FlightDeals />
+          <FlightSearch />
+          <PromoBanners />
+          <PromoFlight />
+          <DomesticDeals />
+          <LastBanner />
+        </div>
       </div>
+
+      {/* 3. Bagian Tambahan (Latar Putih) */}
+      <div className="bg-white py-12">
+        <div className="max-w-[1200px] mx-auto px-4 space-y-16">
+          <FlightSearch/>
+          <AirlineCarousel />
+          <SmartFeatures />
+        </div>
+      </div>
+
+      {/* 4. Footer */}
+      <Footer />
     </main>
   );
 };
