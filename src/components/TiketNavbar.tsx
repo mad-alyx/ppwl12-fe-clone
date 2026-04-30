@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom'; 
+import { Link, useLocation } from 'react-router-dom'; // Cukup satu baris ini saja
 import { ChevronDown, Search } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
-
 const TiketNavbar = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [index, setIndex] = useState(0);
