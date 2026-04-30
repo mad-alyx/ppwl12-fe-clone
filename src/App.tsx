@@ -3,7 +3,6 @@ import Page1 from './pages/Page1';
 import Page2 from './pages/Page2';
 // Navbar diimpor jika ingin muncul di setiap halaman secara otomatis
 // import Navbar from './components/Navbar'; 
-
 function App() {
   return (
     <Router>
