@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { ArrowLeftRight, Plane, Search, ChevronRight } from 'lucide-react';
 
 // --- KOMPONEN 1: FlightSearch ---
-const FlightSearch = () => {
+export const FlightSearch = () => {
   const [isRoundTrip, setIsRoundTrip] = useState(true);
 
   return (
@@ -74,7 +74,7 @@ const FlightSearch = () => {
 };
 
 // --- KOMPONEN 2: FlightInfo ---
-const FlightInfo = () => {
+export const FlightInfo = () => {
   const scrollRef = useRef<HTMLDivElement>(null);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(true);
@@ -105,6 +105,7 @@ const FlightInfo = () => {
       link: 'https://www.tiket.com/id-id/info/tiket-safe'
     }
   ];
+
 
   const handleScroll = () => {
     if (scrollRef.current) {

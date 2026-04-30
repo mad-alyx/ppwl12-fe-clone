@@ -17,7 +17,7 @@ const DomesticDeals = () => {
   ];
 
   return (
-    <div className="w-full bg-[#f4f7fe] pb-20 font-sans">
+    <div className="w-full  bg-[rgb(237,240,247)] pb-20 font-sans">
       <div className="max-w-[1200px] mx-auto px-4">
         
         {/* SECTION: DOMESTIC DEALS */}

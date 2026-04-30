@@ -32,7 +32,7 @@ const Page1 = () => {
       </div>
 
       {/* 2. Banner & Promo Utama */}
-      <div className="space-y-10">
+      <div className="space-y-10 bg-[rgb(237,240,247)]">
         <AppBanner />
         <AleContent /> 
         
