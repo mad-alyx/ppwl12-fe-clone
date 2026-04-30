@@ -8,7 +8,7 @@ const PromoBanners = () => {
   ];
 
   return (
-    <div className="w-full bg-[#f4f7fe] pb-10 font-sans">
+    <div className="w-full bg-[#f4f7fe] pb-10 font-">
       <div className="max-w-[1200px] mx-auto px-4">
         
         {/* SECTION 1: INI BARU MURAH */}

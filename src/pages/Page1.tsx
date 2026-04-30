@@ -1,20 +1,26 @@
 import TiketNavbar from '../components/TiketNavbar';
-import Navbar from '../components/Navbar';
-import FlightSearch from '../components/FlightInfo';
+import TiketHero from '../components/TiketHero';
+import HeroSearchForm from '../components/HeroSearchForm';
+import AleContent from '../components/alecontent';
+import PromoBanners from '../components/PromoBanners';
+import DomesticDeals from '../components/DomesticDeals';
+import LastBanner from '../components/LastBanner';
+import PromoFlight from '../components/PromoFlight';
 
 const Page1 = () => {
   return (
-    <div className="min-h-screen bg-white">
-      {/* Bagian yang kamu minta: TiketNavbar sampai Navbar/Search */}
-      <TiketNavbar />
-      <Navbar />
-      <main>
-        <FlightSearch />
-        <div className="max-w-[1200px] mx-auto px-4 py-10 text-center">
-          <h1 className="text-2xl font-bold">Ini Halaman 1</h1>
-          <p className="text-gray-500">Gunakan menu navigasi untuk pindah ke Halaman 2</p>
-        </div>
-      </main>
+    <div className="min-h-screen bg-[#F5F7FA]"> 
+      <TiketNavbar /> 
+      <TiketHero /> 
+      <HeroSearchForm /> 
+      
+      <div className="max-w-[1200px] mx-auto px-4 space-y-12 pb-20">
+        <PromoBanners /> 
+        <DomesticDeals /> 
+        <PromoFlight /> 
+        <AleContent /> 
+        <LastBanner /> 
+      </div>
     </div>
   );
 };
