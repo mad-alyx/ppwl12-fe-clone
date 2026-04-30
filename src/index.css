@@ -1,42 +1,41 @@
 @import "tailwindcss";
 
+/* 1. Definisi Font Face */
+
+/* Tiket Odyssey - Regular */
 @font-face {
-  font-family: "Beaufort";
-  src: url("/fonts/Beaufort-for-LOL-400.woff2") format("woff2");
+  font-family: "TiketOdyssey";
+  src: url("/fonts/TiketOdysseyText-Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
+  font-display: swap;
 }
 
+/* Tiket Odyssey - Medium/SemiBold */
 @font-face {
-  font-family: "Beaufort";
-  src: url("/fonts/Beaufort-for-LOL-500.woff2") format("woff2");
-  font-weight: 500;
+  font-family: "TiketOdyssey";
+  src: url("/fonts/TiketOdysseyText-SemiBold.woff2") format("woff2");
+  font-weight: 600;
   font-style: normal;
+  font-display: swap;
 }
 
+/* Tiket Odyssey - Bold */
 @font-face {
-  font-family: "Beaufort";
-  src: url("/fonts/Beaufort-for-LOL-700.woff2") format("woff2");
+  font-family: "TiketOdyssey";
+  src: url("/fonts/TiketOdysseyText-Bold.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
+  font-display: swap;
 }
 
-@font-face {
-  font-family: "Spiegel";
-  src: url("/fonts/Spiegel-700.woff2") format("woff2");
-  font-weight: 700;
-  font-style: normal;
-}
 
-@theme {
-  --font-beaufort: "Beaufort", serif;
-  --font-spiegel: "Spiegel", serif;
-}
 
+/* 3. Global Styles */
 :root {
   --background: #0a0a0c;
   --foreground: #e8e6e3;
-  --gold: #937341;
+  --gold: #ffffff;
   --gold-light: #f0e6d2;
   --gold-dark: #785a28;
   --card-bg: #111113;
@@ -53,21 +52,22 @@ html {
 }
 
 body {
+  margin: 0;
   background: var(--background);
   color: var(--foreground);
-  font-family: 'Marcellus', serif;
+  font-family: "TiketOdyssey", sans-serif;
+  -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Spiegel', serif;
+  font-family: "TiketOdyssey", sans-serif;
   font-weight: 700;
-  color: var(--gold);
-  
 }
 
+
 .font-display {
-  font-family: 'Beaufort', serif;
+  font-family: 'TiketOdysseyText', serif;
 }
 
 .text-gold {
@@ -87,7 +87,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .section-title {
-  font-family: 'Beaufort', serif;
+  font-family: 'TiketOdysseyText', serif;
   letter-spacing: 0.35em;
   text-transform: uppercase;
   color: var(--gold);
@@ -129,7 +129,7 @@ h1, h2, h3, h4, h5, h6 {
   animation: slideIn 0.5s ease-out;
 }
 
-/* Card hover effects */
+/* Card hover effects disabled */
 .champion-card {
   transition: all 0.3s ease;
 }
@@ -178,4 +178,78 @@ h1, h2, h3, h4, h5, h6 {
 .btn-gold:hover {
   background: var(--gold);
   color: #0a0a0c;
+}
+
+/* 1. Reset & Global Styles */
+:root {
+  /* Memaksa browser mengabaikan Dark Mode agar teks tidak otomatis jadi putih */
+  color-scheme: light !important;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f4f7fe !important; /* Warna background khas tiket.com */
+  color: #1a202c !important; /* Warna teks gelap standar */
+  font-family: 'TiketOdyssey', 'Open Sans', sans-serif !important;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Memastikan teks putih tetap putih (untuk di atas gambar hero) */
+.text-white {
+  color: #ffffff !important;
+}
+
+/* Warna khusus untuk teks pudar/detail */
+.text-detail {
+  color: #8a93a7 !important;
+}
+
+/* 2. Utility: Hide Scrollbar (Untuk Carousel) */
+.hide-scrollbar::-webkit-scrollbar,
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar,
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* 3. Custom Scrollbar (Tambahan dari Fahdil) */
+.seo-scrollbar::-webkit-scrollbar {
+  width: 9px; 
+}
+
+.seo-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.seo-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #c0c4d0;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0); 
+  background-clip: padding-box;
+}
+
+.seo-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: #a5aab5;
+}
+
+/* Panah Scrollbar SEO */
+.seo-scrollbar::-webkit-scrollbar-button:single-button:vertical:decrement {
+  height: 14px;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 5' fill='%23a5aab5'><path d='M5 0 L10 5 L0 5 Z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: 1.4px 5px; 
+  background-size: 6px 3px; 
+}
+
+.seo-scrollbar::-webkit-scrollbar-button:single-button:vertical:increment {
+  height: 14px;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 5' fill='%23a5aab5'><path d='M0 0 L10 0 L5 5 Z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: 1.4px 5px; 
+  background-size: 6px 3px; 
 }
