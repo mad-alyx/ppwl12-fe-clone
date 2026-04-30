@@ -13,35 +13,52 @@ import SeoLinkTabs from '../components/SeoLinkTabs';
 import SmartFeatures from '../components/SmartFeatures';
 import Footer from '../components/Footer'; 
 
+// Import tambahan dari branch Fahdil
+import PromoBanners from '../components/PromoBanners';
+import DomesticDeals from '../components/DomesticDeals';
+import LastBanner from '../components/LastBanner';
+import PromoFlight from '../components/PromoFlight';
+
 const Page1 = () => {
   return (
     <div className="min-h-screen bg-[#F5F7FA] flex flex-col gap-0"> 
-      {/* 1. Bagian Atas (Header & Search) */}
+      {/* 1. Header & Search Section */}
       <TiketNavbar /> 
       <TiketHero /> 
       
-      {/* Search Form dinaikkan posisinya pakai margin negatif di komponennya atau di sini */}
+      {/* Search Form dengan margin negatif agar "naik" ke area Hero */}
       <div className="-mt-12 relative z-10">
         <HeroSearchForm /> 
       </div>
 
-      {/* 2. Isi Konten (Ale, Iren, Nayla) */}
-      <AppBanner />
-      <AleContent /> 
-      <BusTravelSection />
-      <PromoSections />
+      {/* 2. Banner & Promo Utama */}
+      <div className="space-y-10">
+        <AppBanner />
+        <AleContent /> 
+        
+        <div className="max-w-[1200px] mx-auto px-4 space-y-12">
+          <PromoBanners />
+          <PromoFlight />
+          <DomesticDeals />
+          <BusTravelSection />
+          <PromoSections />
+        </div>
 
-      {/* 3. Komponen Tambahan dari Branch Nayla */}
-      <BannerDp />
-      <TravelIdeas />
+        <BannerDp />
+        <LastBanner />
+      </div>
+
+      {/* 3. Informasi Tambahan & SEO */}
+      <div className="mt-16">
+        <TravelIdeas />
+        <AirlineCarousel />
+        <SeoLinkTabs />
+        <SmartFeatures />
+      </div>
       
-      
-      {/* Modal/Popup biasanya ditaruh paling bawah */}
-      <PromoPopup />
-      <AirlineCarousel />
-      <SeoLinkTabs />
-      <SmartFeatures />
+      {/* 4. Footer & Popup */}
       <Footer />
+      <PromoPopup />
     </div>
   );
 };

@@ -1,65 +1,37 @@
 @import "tailwindcss";
 
+/* 1. Definisi Font Face */
+
+/* Tiket Odyssey - Regular */
 @font-face {
-  font-family: "TiketOdysseyText";
+  font-family: "TiketOdyssey";
   src: url("/fonts/TiketOdysseyText-Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
+  font-display: swap;
 }
 
+/* Tiket Odyssey - Medium/SemiBold */
 @font-face {
-  font-family: "TiketOdysseyText";
+  font-family: "TiketOdyssey";
   src: url("/fonts/TiketOdysseyText-SemiBold.woff2") format("woff2");
   font-weight: 600;
-  src: url("/fonts/TiketOdysseyText-Medium.woff2") format("woff2"); /* Jika ada file mediumnya */
-  font-weight: 500;
   font-style: normal;
+  font-display: swap;
 }
 
+/* Tiket Odyssey - Bold */
 @font-face {
-  font-family: "TiketOdysseyText";
+  font-family: "TiketOdyssey";
   src: url("/fonts/TiketOdysseyText-Bold.woff2") format("woff2");
-  src: url("/fonts/TiketOdysseyText-Bold.woff2") format("woff2"); /* Jika ada file boldnya */
-  font-weight: 700;
-  font-style: normal;
-}
-
-/* 2. Konfigurasi Theme Tailwind v4 */
-@theme {
-  --font-tiket: "TiketOdyssey", sans-serif;
-}
-
-@font-face {
-  font-family: 'TiketOdyssey';
-  src: url('/fonts/TiketOdysseyText-Regular.woff2') format('woff2');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'TiketOdyssey';
-  src: url('/fonts/TiketOdysseyText-SemiBold.woff2') format('woff2');
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'TiketOdyssey';
-  src: url('/fonts/TiketOdysseyText-Bold.woff2') format('woff2');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 
-body {
-  margin: 0;
-  font-family: 'TiketOdysseyText', system-ui, -apple-system, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  --font-odyssey: "TiketOdysseyText", sans-serif;
-}
 
+
+/* 3. Global Styles */
 :root {
   --background: #0a0a0c;
   --foreground: #e8e6e3;
@@ -80,15 +52,16 @@ html {
 }
 
 body {
+  margin: 0;
   background: var(--background);
   color: var(--foreground);
-  font-family: 'TiketOdysseyText', serif;
+  font-family: "TiketOdyssey", sans-serif;
+  -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'TiketOdysseyText', sans-serif !important;
-  font-family: 'TiketOdysseyText', serif;
+  font-family: "TiketOdyssey", sans-serif;
   font-weight: 700;
 }
 
@@ -156,7 +129,7 @@ h1, h2, h3, h4, h5, h6 {
   animation: slideIn 0.5s ease-out;
 }
 
-/* Card hover effects */
+/* Card hover effects disabled */
 .champion-card {
   transition: all 0.3s ease;
 }
@@ -207,65 +180,24 @@ h1, h2, h3, h4, h5, h6 {
   color: #0a0a0c;
 }
 
-/* Tambahkan di akhir file untuk memaksa font dan warna bekerja */
-@layer base {
-  body {
-    font-family: 'Open Sans', sans-serif !important;
-  }
-
-  /* Ini supaya class text-white dari tailwind menang telak */
-  .text-white {
-    color: #f4efef !important;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-}
-
-/* Hapus margin default browser */
-body {
-  margin: 0;
-  padding: 0;
-}
-
-.no-scrollbar::-webkit-scrollbar { display: none; }
-.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
-
-/* --- TAMBAHKAN DI BAGIAN PALING BAWAH --- */
-
+/* 1. Reset & Global Styles */
 :root {
-  /* Memaksa browser mengabaikan Dark Mode agar teks tidak jadi putih */
+  /* Memaksa browser mengabaikan Dark Mode agar teks tidak otomatis jadi putih */
   color-scheme: light !important;
 }
 
 body {
-  /* Memastikan background dan warna teks utama sesuai standar tiket.com */
-  background-color: #f4f7fe !important;
-  color: #1a202c !important;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f7fe !important; /* Warna background khas tiket.com */
+  color: #1a202c !important; /* Warna teks gelap standar */
+  font-family: 'TiketOdyssey', 'Open Sans', sans-serif !important;
+  -webkit-font-smoothing: antialiased;
 }
 
-/* Memastikan semua judul dan teks dalam kartu promo muncul dengan warna tajam */
-h1, h2, h3, h4, h5, h6, p, span {
-  color: inherit; 
-}
-
-/* Menghilangkan scrollbar pada filter maskapai agar rapi seperti di gambar */
-.no-scrollbar::-webkit-scrollbar {
-  display: none;
-}
-.no-scrollbar {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-
-/* Di bagian bawah index.css */
-body {
-  background-color: #f4f7fe !important;
-  color: #1a202c !important; /* Warna default teks tiket */
+/* Memastikan teks putih tetap putih (untuk di atas gambar hero) */
+.text-white {
+  color: #ffffff !important;
 }
 
 /* Warna khusus untuk teks pudar/detail */
@@ -273,6 +205,7 @@ body {
   color: #8a93a7 !important;
 }
 
+/* 2. Utility: Hide Scrollbar (Untuk Carousel) */
 .hide-scrollbar::-webkit-scrollbar,
 .no-scrollbar::-webkit-scrollbar {
   display: none;
@@ -284,3 +217,39 @@ body {
   scrollbar-width: none;
 }
 
+/* 3. Custom Scrollbar (Tambahan dari Fahdil) */
+.seo-scrollbar::-webkit-scrollbar {
+  width: 9px; 
+}
+
+.seo-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.seo-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #c0c4d0;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0); 
+  background-clip: padding-box;
+}
+
+.seo-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: #a5aab5;
+}
+
+/* Panah Scrollbar SEO */
+.seo-scrollbar::-webkit-scrollbar-button:single-button:vertical:decrement {
+  height: 14px;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 5' fill='%23a5aab5'><path d='M5 0 L10 5 L0 5 Z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: 1.4px 5px; 
+  background-size: 6px 3px; 
+}
+
+.seo-scrollbar::-webkit-scrollbar-button:single-button:vertical:increment {
+  height: 14px;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 5' fill='%23a5aab5'><path d='M0 0 L10 0 L5 5 Z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: 1.4px 5px; 
+  background-size: 6px 3px; 
+}

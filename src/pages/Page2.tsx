@@ -1,48 +1,102 @@
-import RecentSearch from '../components/RecentSearch';
-import FlightDeals from '../components/FlightDeals';
-import FlightSearch from '../components/FlightInfo'; 
-import PromoBanners from '../components/PromoBanners';
-import PromoFlight from '../components/PromoFlight';
-import DomesticDeals from '../components/DomesticDeals';
-import LastBanner from '../components/LastBanner';
-import AirlineCarousel from '../components/AirlineCarousel';
-import SeoLinkTabs from '../components/SeoLinkTabs';
-import SmartFeatures from '../components/SmartFeatures';
-import Footer from '../components/Footer'; 
-import TiketNavbar from '../components/TiketNavbar';
+import React from 'react';
+import RecentSearch from '@/components/RecentSearch';
+import FlightDeals from '@/components/FlightDeals';
+import FlightSearch from '@/components/FlightInfo'; // Ini komponen pencarianmu
+import PromoBanners from '@/components/PromoBanners';
+import PromoFlight from '@/components/PromoFlight';
+import DomesticDeals from '@/components/DomesticDeals';
+import LastBanner from '@/components/LastBanner';
+import AirlineCarousel from '@/components/AirlineCarousel';
+import SmartFeatures from '@/components/SmartFeatures';
+import Footer from '@/components/Footer'; 
+import TiketNavbar from '@/components/TiketNavbar';
+
+// Import komponen tambahan dari Fahdil
+import { ImageBanner } from "../components/shared/imageBanner";
+import { CheckInGrid } from "../components/checkIn/checkInGrid";
+import { TabbedLinkGroup } from "../components/seoAndNav/tabbedLinkGroup";
+import { PromoRegionTabs } from "../components/seoAndNav/promoRegionTabs";
+import { SeoSections } from "../components/seoAndNav/seoSections";
 
 const Page2 = () => {
   return (
-    <main className="w-full min-h-screen bg-white">
-      {/* Navbar tetap di paling atas */}
+    <div className="min-h-screen bg-[#F5F7FA]">
+      {/* 1. Navigasi & Pencarian */}
       <TiketNavbar />
       <FlightSearch />
 
-      {/* 1. Bagian Konten Utama (Latar Abu-abu Muda) */}
-      <div className="bg-[#f8f9fd] py-8">
-        <div className="max-w-[1200px] mx-auto px-4 space-y-10">
+      <main className="w-full font-sans">
+        
+        {/* 2. Bagian Konten Kamu (Promo & Deals) */}
+        <div className="max-w-[1200px] mx-auto px-4 py-10 space-y-16">
           <RecentSearch />
-          <SeoLinkTabs />
-          <FlightDeals />
-          <FlightSearch />
-          <PromoBanners />
-          <PromoFlight />
-          <DomesticDeals />
+          
+          <div className="grid gap-16">
+            <PromoBanners />
+            <FlightDeals />
+            <PromoFlight />
+            <DomesticDeals />
+          </div>
+          
           <LastBanner />
         </div>
-      </div>
 
-      {/* 2. Bagian Informasi & Partner (Latar Putih) */}
-      <div className="bg-white py-12">
-        <div className="max-w-[1200px] mx-auto px-4 space-y-16">
-          <AirlineCarousel />
-          <SmartFeatures />
+        {/* 3. Bagian Tambahan (Info & Fitur Cerdas) */}
+        <div className="bg-white py-12 border-t">
+          <div className="max-w-[1200px] mx-auto px-4 space-y-16">
+            <AirlineCarousel />
+            <SmartFeatures />
+          </div>
         </div>
-      </div>
 
-      {/* 3. Footer */}
+        {/* 4. Bagian Fahdil (Gabungan SEO & Banner Khusus) */}
+        <div className="w-full bg-[rgb(237,240,247)] pt-12 pb-1">
+          <div className="max-w-[1080px] mx-auto px-4 md:px-0 space-y-10">
+            <ImageBanner 
+              imgSrc="https://s-light.tiket.photos/t/01E25EBZS3W0FY9GTG6C42E1SE/rsfit19201280gsm/mobile-modules/2025/05/31/462d81ae-7be2-4612-adac-accf3c6858dc-1748680446310-29096c2c8631e762d29d4dee7ab2d005.jpg"
+              altText="Promo PayLater Tiket Pesawat"
+              linkUrl="https://www.tiket.com/id-id/promo/pesawat/pesawat-paylater"
+            />
+
+            <CheckInGrid />
+            
+            <ImageBanner 
+              imgSrc="https://s-light.tiket.photos/t/01E25EBZS3W0FY9GTG6C42E1SE/rsfit19201280gsm/mobile-modules/2023/08/24/5e19cd0d-2b7d-4829-a3b6-187e5ede369b-1692881488728-cc647383bc6803b96baf78ad44112d2e.jpg"
+              altText="Download Aplikasi Tiket.com"
+              linkUrl="https://tiket.onelink.me/3719787275/7jadpyqb"
+              aspectRatioClass="aspect-[4/1]"
+            />
+
+            <TabbedLinkGroup />
+
+            <ImageBanner 
+              imgSrc="https://s-light.tiket.photos/t/01E25EBZS3W0FY9GTG6C42E1SE/rsfit19201280gsm/mobile-modules/2025/02/10/7f4c581f-448e-42d4-b68a-c45eed6070e7-1739173752122-50f5b7d2035b6dadd6d25429e6798173.png"
+              altText="Cek Daftar Hari Libur Nasional"
+              linkUrl="https://www.tiket.com/id-id/explore/libur-nasional-dan-cuti-bersama-2026"
+              aspectRatioClass="aspect-[4/1]"
+            />
+          </div>
+        </div>
+
+        {/* 5. SEO Sections (Latar Putih) */}
+        <div className="w-full bg-white pt-10 pb-6">
+          <div className="max-w-[1080px] mx-auto px-4 md:px-0">
+            <SeoSections />
+
+          </div>
+        </div>
+
+        {/* 6. Promo Region (Latar Abu-abu) */}
+        <div className="w-full bg-[rgb(237,240,247)] pt-10 pb-10">
+          <div className="max-w-[1080px] mx-auto px-4 md:px-0">
+            <PromoRegionTabs />
+          </div>
+        </div>
+      </main>
+
+      {/* 7. Footer */}
       <Footer />
-    </main>
+    </div>
   );
 };
 

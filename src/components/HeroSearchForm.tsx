@@ -1,4 +1,5 @@
 import { useState } from "react";
+
 type TripType = "one-way" | "round-trip";
 type ActiveTab = "flights" | "todos" | "hotels" | "airport" | "trains" | "villas" | "bus" | "whoosh" | "car" | "event" | "flighttbd" | "visa" | "giftcard" | "travelguide" | "treasure" | "mcr" | "insurance" | "affiliate";
 
