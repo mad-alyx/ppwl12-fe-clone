@@ -6,11 +6,11 @@ const FlightSearch = () => {
   const [isRoundTrip, setIsRoundTrip] = useState(true);
 
   return (
-    <div className="relative h-[550px] w-full flex items-center">
+    <div className="relative h-[650px] w-full flex items-center pt-32  ">
       {/* Background Hero */}
       <img 
         src="/bgpesawat.png" 
-        className="absolute inset-0 w-full h-full object-cover"
+        className="absolute inset-0 w-full h-full object-cover "
         alt="Hero Background"
       />
       <div className="absolute inset-0 bg-black/30"></div>

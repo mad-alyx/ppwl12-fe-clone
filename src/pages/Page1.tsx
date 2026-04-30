@@ -8,6 +8,10 @@ import PromoSections from "../components/PromoSections";
 import BannerDp from '../components/BannerDP';
 import PromoPopup from '../components/PromoPopup';
 import TravelIdeas from '../components/TravelIdeas';
+import AirlineCarousel from '../components/AirlineCarousel';
+import SeoLinkTabs from '../components/SeoLinkTabs';
+import SmartFeatures from '../components/SmartFeatures';
+import Footer from '../components/Footer'; 
 
 const Page1 = () => {
   return (
@@ -31,8 +35,13 @@ const Page1 = () => {
       <BannerDp />
       <TravelIdeas />
       
+      
       {/* Modal/Popup biasanya ditaruh paling bawah */}
       <PromoPopup />
+      <AirlineCarousel />
+      <SeoLinkTabs />
+      <SmartFeatures />
+      <Footer />
     </div>
   );
 };

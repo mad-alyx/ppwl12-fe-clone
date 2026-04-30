@@ -36,7 +36,7 @@ const LinkTabSection = ({ title, tabs, linksData }: any) => {
             <button
               key={tab}
               type="button"
-              ref={(el) => (tabRefs.current[index] = el)} 
+              ref={(el) => { tabRefs.current[index] = el; }}
               onClick={() => setActiveTab(tab)}
               className="relative px-0 mr-8 pb-3 bg-transparent border-none outline-none cursor-pointer group"
             >
