@@ -446,3 +446,5 @@ export const SeoLinkTabs = () => {
     </div>
   );
 };
+
+export default SeoLinkTabs;

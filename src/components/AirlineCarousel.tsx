@@ -249,3 +249,5 @@ export const AirlineCarousel = () => {
     </section>
   );
 };
+
+export default AirlineCarousel;

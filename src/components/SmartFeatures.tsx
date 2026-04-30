@@ -48,3 +48,5 @@ export const SmartFeatures = () => {
     </section>
   );
 };
+
+export default SmartFeatures;
