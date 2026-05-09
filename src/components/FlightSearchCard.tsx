@@ -8,7 +8,7 @@ const FlightSearch = () => {
     <div className="relative h-[550px] w-full flex items-center">
       {/* Background Hero */}
       <img 
-        src="/bgpesawat.png" 
+        src="/img/bgpesawat.png" 
         className="absolute inset-0 w-full h-full object-cover"
         alt="Hero Background"
       />
