@@ -173,7 +173,6 @@ export default function AleContent() {
       price: "238.217",
       info: "5 kamar tersisa",
       label: "Top Hotel 7",
-      image: "https://s-light.tiket.photos/t/01E25EB4601149959779357416353345/rsfit19201280wm/hotel/2021/03/04/00965706-e75a-4933-9114-17792613589b-1614850025757-5509e5306385f7566160100a74798f06.jpg"
     },
     {
       name: "Hotel Pantes Candi Semarang",
@@ -183,7 +182,6 @@ export default function AleContent() {
       stars: 2,
       oldPrice: "170.154",
       price: "162.797",
-      image: "https://s-light.tiket.photos/t/01E25EB4601149959779357416353345/rsfit19201280wm/hotel/2022/02/10/77c68832-680c-4395-8120-1a13437a3465-1644485507851-f40a1b67272827725944111306354898.jpg"
     },
     {
       name: "Ibis Budget Semarang Tendean",
@@ -192,7 +190,6 @@ export default function AleContent() {
       reviews: "2.353",
       stars: 2,
       price: "214.817",
-      image: "https://s-light.tiket.photos/t/01E25EB4601149959779357416353345/rsfit19201280wm/hotel/2021/04/23/9f9c759c-687a-4424-9b2e-9d8a9b2b2b2b.jpg"
     },
     {
       name: "Padma Hotel Semarang",
@@ -203,7 +200,6 @@ export default function AleContent() {
       oldPrice: "1.993.470",
       price: "1.920.661",
       info: "4 kamar tersisa",
-      image: "https://s-light.tiket.photos/t/01E25EB4601149959779357416353345/rsfit19201280wm/hotel/2022/08/24/769b76c8-1f1a-47a4-8456-78567543232.jpg"
     },
     {
       name: "Quest Hotel Simpang Lima - Semarang by Aston",
@@ -214,7 +210,6 @@ export default function AleContent() {
       oldPrice: "537.577",
       price: "443.510",
       label: "Top Hotel 10",
-      image: "https://s-light.tiket.photos/t/01E25EB4601149959779357416353345/rsfit19201280wm/hotel/2020/03/12/34567890-1234-5678-9012-345678901234.jpg"
     }
   ];
 
@@ -229,7 +224,6 @@ export default function AleContent() {
       price: "648.872",
       info: "2 kamar tersisa",
       label: "Top Hotel 5",
-      image: "https://s-light.tiket.photos/t/01E25EB4601149959779357416353345/rsfit19201280wm/hotel/2022/03/17/84e4f719-7095-4682-959c-86e0018d9633-1584442653303-34e8f399d211244585c54d1d80362f6b.jpg"
     },
     {
       name: "Hotel 98",
@@ -240,7 +234,6 @@ export default function AleContent() {
       oldPrice: "550.643",
       price: "337.083",
       label: "Top Hotel 3",
-      image: "https://s-light.tiket.photos/t/01E25EB4601149959779357416353345/rsfit19201280wm/hotel/2021/01/21/58265005-9799-4c12-a72a-14d792078864-1611222474813-90d0b8939a9782570020054e7d5d0f62.jpg"
     },
     {
       name: "UCSI Hotel Kuching",
@@ -251,7 +244,6 @@ export default function AleContent() {
       oldPrice: "1.784.842",
       price: "713.730",
       label: "Top Hotel 7",
-      image: "https://s-light.tiket.photos/t/01E25EB4601149959779357416353345/rsfit19201280wm/hotel/2022/07/07/0d7e6e5a-273a-4a2a-995c-564a5f36e4f1-1657187123956-654a9d701a24d8583907f154784a8607.jpg"
     },
     {
       name: "Grand Margherita Hotel",
@@ -261,7 +253,6 @@ export default function AleContent() {
       stars: 4,
       price: "1.118.298",
       label: "Top Hotel 10",
-      image: "https://s-light.tiket.photos/t/01E25EB4601149959779357416353345/rsfit19201280wm/hotel/2020/06/10/a6b0c20f-0255-4424-aa6d-8d481f335b71-1591771146244-67d7a6e133e08d66050b86a014a9058b.jpg"
     },
     {
       name: "Abell Hotel",
@@ -272,7 +263,6 @@ export default function AleContent() {
       oldPrice: "626.592",
       price: "523.273",
       label: "Top Hotel 9",
-      image: "https://s-light.tiket.photos/t/01E25EB4601149959779357416353345/rsfit19201280wm/hotel/2020/03/17/84e4f719-7095-4682-959c-86e0018d9633-1584442653303-34e8f399d211244585c54d1d80362f6b.jpg"
     }
   ];
 
@@ -288,7 +278,6 @@ export default function AleContent() {
       oldPrice: "293.001",
       price: "215.289",
       info: "2 kamar tersisa",
-      image: "https://s-light.tiket.photos/t/01E25EB4601149959779357416353345/rsfit19201280wm/hotel/2021/03/04/00965706-e75a-4933-9114-17792613589b-1614850025757-5509e5306385f7566160100a74798f06.jpg"
     },
     {
       name: "Mazari Villas",
@@ -299,7 +288,6 @@ export default function AleContent() {
       oldPrice: "3.074.180",
       price: "2.314.952",
       info: "1 kamar tersisa",
-      image: "https://s-light.tiket.photos/t/01E25EB4601149959779357416353345/rsfit19201280wm/hotel/2021/01/21/58265005-9799-4c12-a72a-14d792078864-1611222474813-90d0b8939a9782570020054e7d5d0f62.jpg"
     },
     {
       name: "Kanishka Villa",
@@ -311,7 +299,6 @@ export default function AleContent() {
       oldPrice: "1.410.247",
       price: "1.033.388",
       info: "3 kamar tersisa",
-      image: "https://s-light.tiket.photos/t/01E25EB4601149959779357416353345/rsfit19201280wm/hotel/2022/07/07/0d7e6e5a-273a-4a2a-995c-564a5f36e4f1-1657187123956-654a9d701a24d8583907f154784a8607.jpg"
     },
     {
       name: "The Legian Sunset Residence",
@@ -323,7 +310,6 @@ export default function AleContent() {
       oldPrice: "738.219",
       price: "304.114",
       label: "Top Stay 9",
-      image: "https://s-light.tiket.photos/t/01E25EB4601149959779357416353345/rsfit19201280wm/hotel/2020/06/10/a6b0c20f-0255-4424-aa6d-8d481f335b71-1591771146244-67d7a6e133e08d66050b86a014a9058b.jpg"
     },
     {
       name: "Black Lava Camp Kintamani",
@@ -336,7 +322,6 @@ export default function AleContent() {
       price: "415.443",
       info: "1 kamar tersisa",
       label: "Top Stay 10",
-      image: "https://s-light.tiket.photos/t/01E25EB4601149959779357416353345/rsfit19201280wm/hotel/2022/08/24/769b76c8-1f1a-47a4-8456-78567543232.jpg"
     }
   ];
 
@@ -598,7 +583,6 @@ export default function AleContent() {
             {discountHotels.map((h, i) => (
               <div key={i} className="min-w-[220px] max-w-[220px] bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm snap-start flex flex-col">
                 <div className="relative h-32">
-                  <img src={h.image} alt={h.name} className="w-full h-full object-cover" />
                   {h.label && (
                     <div className="absolute top-2 left-2 bg-black/60 text-white text-[10px] px-2 py-0.5 rounded-md backdrop-blur-sm flex items-center gap-1">
                       <span>⚽</span> {h.label}
@@ -666,7 +650,6 @@ export default function AleContent() {
             {internationalHotelDeals.map((h, i) => (
               <div key={i} className="min-w-[220px] max-w-[220px] bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm snap-start flex flex-col">
                 <div className="relative h-32">
-                  <img src={h.image} alt={h.name} className="w-full h-full object-cover" />
                   {h.label && (
                     <div className="absolute top-2 left-2 bg-black/60 text-white text-[9px] px-2 py-0.5 rounded-md backdrop-blur-sm flex items-center gap-1 font-bold">
                       <span>⚽</span> {h.label}
@@ -735,7 +718,6 @@ export default function AleContent() {
             {vilaDeals.map((v, i) => (
               <div key={i} className="min-w-[220px] max-w-[220px] bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm snap-start flex flex-col hover:shadow-md transition-shadow">
                 <div className="relative h-32">
-                  <img src={v.image} alt={v.name} className="w-full h-full object-cover" />
                   {v.label && (
                     <div className="absolute top-2 left-2 bg-black/60 text-white text-[9px] px-2 py-0.5 rounded-md backdrop-blur-sm flex items-center gap-1 font-bold">
                       <span>🏠</span> {v.label}
